@@ -39,7 +39,7 @@
 
     <div class="container-fluid">
       <% if flash[:notice].present? %>
-        <%= flash[:notice] %> 
+        <p class="alert alert-success"><%= flash[:notice] %></p> 
       <% end %>
       
       <%= yield %>
