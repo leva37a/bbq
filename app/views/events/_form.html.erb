@@ -1,28 +1,34 @@
-<%= form_for(@event) do |f| %>
+<%= form_for @event, data: {turbo: false} do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: @event} %>
 
-  <div class="mb-3">
-    <%= f.label :title, class: "fw-bolder mb-2" %>
-    <%= f.text_field :title, class: 'form-control' %>
+  <div class="form-floating mb-3">
+    <%= f.text_field :title, autofocus: true, autocomplete: "title",               placeholder: t('activerecord.attributes.event.title'),
+                     id: "floatingInput", class: "form-control" %>
+    <%= f.label :title, for: "floatingInput" %>
   </div>
 
-  <div class="mb-3">
-    <%= f.label :address, class: "fw-bolder mb-2" %>
-    <%= f.text_field :address, class: 'form-control' %>
+  <div class="form-floating mb-3">
+    <%= f.text_field :address, autofocus: true, autocomplete: "address",
+                     placeholder: t('activerecord.attributes.event.address'), id: "floatingInput", class: "form-control" %>
+    <%= f.label :address, for: "floatingInput" %>
   </div>
 
-  <div class="mb-3">
-    <%= f.label :datetime, class: "fw-bolder mb-2" %>
+  <div class="form-group mb-3">
+    <%= f.label :datetime %>
     <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
   </div>
 
-  <div class="mb-3">
-    <%= f.label :description, class: "fw-bolder mb-2" %>
-    <%= f.text_area :description, class: 'form-control' %>
+  <div class="form-floating mb-3">
+    <%= f.text_area :description, autofocus: true, autocomplete: "              description",
+                    placeholder: t('views.events.description'), id: "floatingTextarea2", class: "form-control" %>
+    <%= f.label :description, for: "floatingTextarea2" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+  <div class="actions mb-3">
+    <%= f.submit t('views.events.save'), class: 'btn btn-info' %>
+  </div>
+
+  <div class="actions mb-3">
+     <%= link_to t('views.events.return'), :back %>
   </div>
 <% end %>
