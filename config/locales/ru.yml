@@ -21,6 +21,10 @@ ru:
       destroyed: "Событие успешно удалено"
     users:
       updated: "Профиль обновлен"
+    comments: 
+      created: "Комментарий успешно создан"
+      destroyed: "Комментарий успешно удален"
+      error: "Ошибка с комментарием"
   app:
     name: "Шашлыки!"
     company: "Хороший программист"
@@ -36,6 +40,8 @@ ru:
       many: "В вашей форме %{count} ошибок"
 
   views:
+    comments:
+      destroy_confirm: "Точно удалить комментарий?"
     devise: 
       name: "Имя"
       email: "Email"
