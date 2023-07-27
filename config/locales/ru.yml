@@ -25,6 +25,10 @@ ru:
       created: "Комментарий успешно создан"
       destroyed: "Комментарий успешно удален"
       error: "Ошибка с комментарием"
+    subscriptions:
+      created: "Вы успешно подписались на событие"
+      destroyed: "Вы отписались от события"
+      error: "Ошибка подписки"
   app:
     name: "Шашлыки!"
     company: "Хороший программист"
@@ -42,9 +46,11 @@ ru:
   views:
     comments:
       destroy_confirm: "Точно удалить комментарий?"
+
     devise: 
       name: "Имя"
       email: "Email"
+
     events:
       events: "События"
       new_event: "Новое событие"
@@ -54,6 +60,9 @@ ru:
       save: "Сохранить"
       return: "Вернуться"
       edit_event: "Редактировать событие"
+      call: "Зовет:"
+      will_go: "Пойдут:"
+      i_will_go: "Я пойду:"
 
     users:
       save: "Сохранить"
@@ -63,4 +72,7 @@ ru:
       edit_profile: "Редактировать профиль"
       organization: "Организовал"
       user_nothing_organized: "Пользователь пока ничего не организовал"
+
+    subscriptions:
+      destroy_confirm: "Точно отписаться?"
 

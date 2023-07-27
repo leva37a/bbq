@@ -33,5 +33,22 @@
         </div>
       </div>
     </div>
+
+    <div class="col-md-4 mt-4">
+      <div class="event-owner">
+        <h4><%= t("views.events.call") %></h4>
+          <p><%= render partial: "users/user", object: @event.user %></p>
+      </div>
+      <div class="event-subscriptions">
+        <h4><%= t("views.events.will_go") %></h4>
+      </div>
+      <p>
+        <%= render partial: "subscriptions/subscription", 
+        collection: @event.subscriptions %> 
+      </p>
+      <div class="event-subscription-form">
+        <h4><%= t("views.events.i_will_go") %></h4>
+      </div>
+    </div>
   </div>
 </div>

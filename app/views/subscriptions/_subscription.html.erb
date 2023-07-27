@@ -1,0 +1,16 @@
+<span class="subscription">
+  <div class="d-flex align-items-center justify-content-center">
+    <% if subscription.user.present? %>
+      <%= render partial: 'users/user', object: subscription.user %>
+    <% else %>
+      <em class="word_wrap"><%= subscription.user_name %></em>
+    <% end %>
+    <% if current_user_can_edit?(subscription) %>
+      <%= link_to type_icon('trash'),
+          event_subscription_path(subscription.event, subscription),
+          data: {turbo_method: :delete, turbo_confirm: t('views.subscriptions.destroy_confirm') }, class: "btn" 
+           %>
+    <% end %>
+
+  </div>
+</span>
