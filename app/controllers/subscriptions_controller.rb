@@ -9,7 +9,9 @@ class SubscriptionsController < ApplicationController
     if @new_subscription.save
       redirect_to @event, notice: I18n.t("controllers.subscriptions.created")
     else
-      render 'events/show', alert: I18n.t("controllers.subscriptions.error")
+      flash.now[:alert] = I18n.t("controllers.subscriptions.error")
+
+      render :"events/show"
     end
   end
 

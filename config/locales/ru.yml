@@ -3,6 +3,9 @@ ru:
     models:
       user: "Пользовать"
       event: "Событие"
+
+      errors:
+        exist_email: "уже существует"
     attributes:
       user:
         email: "Email"
@@ -29,6 +32,7 @@ ru:
       created: "Вы успешно подписались на событие"
       destroyed: "Вы отписались от события"
       error: "Ошибка подписки"
+      exist_email: "Подписчик с таким почтовым ящиком уже существует"
   app:
     name: "Шашлыки!"
     company: "Хороший программист"

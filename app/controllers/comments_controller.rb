@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
     if @new_comment.save
       redirect_to @event, notice: I18n.t("controllers.comments.created")
     else
-      render 'events/show', alert: I18n.t("controllers.comments.error")
+      flash.now[:alert] = I18n.t("controllers.comments.error")
+
+      render :"events/show"
     end
   end
 
