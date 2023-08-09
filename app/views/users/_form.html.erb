@@ -13,6 +13,12 @@
     <%= form.label :email, for: "floatingInput" %>
   </div>
 
+  <div class="form-control mb-3">
+    <%= form.label :avatar, class: "form-label", for: "imageFile" %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= form.file_field :avatar, type: "file", class: "form-control", id: "imageFile" %>
+  </div>
+
   <div class="actions mb-3">
     <%= form.submit t('views.users.save'), class: 'btn btn-info' %>
   </div>
