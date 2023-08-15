@@ -1,0 +1,9 @@
+<div class="event-photo buffer-both">
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <p class="mb-1 mt-1">
+    <%= t('views.photos.added') %>
+  </p>
+  <p class="card-text mb-1">
+    <%= render partial: 'users/user', object: photo.user %>
+  </p>
+</div>

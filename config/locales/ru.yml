@@ -18,6 +18,10 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      comment:
+        body: "Ваш комментарий"
+      photo:
+        photo: "Загрузите фотографии"
   controllers:
     events:
       created: "Событие успешно создано"
@@ -34,6 +38,11 @@ ru:
       destroyed: "Вы отписались от события"
       error: "Ошибка подписки"
       exist_email: "Подписчик с таким почтовым ящиком уже существует"
+    photos:
+      created: "Фотография успешно добавлена"
+      destroyed: "Фотография удалена"
+      error: "Ошибка с фотографии"
+
   app:
     name: "Шашлыки!"
     company: "Хороший программист"
@@ -51,6 +60,7 @@ ru:
   views:
     comments:
       destroy_confirm: "Точно удалить комментарий?"
+      submit: "Отправить"
 
     devise: 
       name: "Имя"
@@ -69,6 +79,10 @@ ru:
       will_go: "Пойдут:"
       i_will_go: "Я пойду:"
 
+    photos:
+      upload: "Загрузить"
+      added: "Добавил"
+
     users:
       save: "Сохранить"
       edit_title: "Редактирование профиля"
@@ -80,4 +94,5 @@ ru:
 
     subscriptions:
       destroy_confirm: "Точно отписаться?"
+      sign: "Подписаться"
 
