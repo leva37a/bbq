@@ -1,7 +1,7 @@
 ru:
   activerecord:
     models:
-      user: "Пользовать"
+      user: "Пользователь"
       event: "Событие"
 
       errors:
@@ -65,6 +65,8 @@ ru:
     devise: 
       name: "Имя"
       email: "Email"
+      password: 'Пароль'
+      password_confirm: "Подтвердите пароль"
 
     events:
       events: "События"

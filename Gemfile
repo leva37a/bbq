@@ -18,8 +18,9 @@ gem "stimulus-rails"
 gem "turbo-rails"
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "letter_opener", group: :development
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do
