@@ -7,6 +7,8 @@ class CommentsController < ApplicationController
     @new_comment.user = current_user
 
     if @new_comment.save
+      MailNotificationJob.perform_later @new_comment
+
       redirect_to @event, notice: I18n.t("controllers.comments.created")
     else
       flash.now[:alert] = I18n.t("controllers.comments.error")
