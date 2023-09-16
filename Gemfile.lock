@@ -143,6 +143,7 @@ GEM
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.5.3)
     pkg-config (1.5.2)
     public_suffix (5.0.3)
     puma (5.6.5)
@@ -234,6 +235,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   letter_opener
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   rails-i18n
