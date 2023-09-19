@@ -1,6 +1,7 @@
 <div class="col-sm-6 col-md-4 mb-3">
   <div class="thumbnail">
-    <div class="event-background" style="background-image: url(/assets/event_thumb.jpg)">
+    <%= content_tag 'div', '', class: 'event-background',
+      style: "background-image: url(#{asset_path('event_thumb.jpg')})" %>
       <div class="thumbnail-inner event-info-inner">
         <div class="caption">
           <div class="event-description">
@@ -15,6 +16,5 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
