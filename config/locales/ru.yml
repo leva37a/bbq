@@ -67,6 +67,7 @@ ru:
       email: "Email"
       password: 'Пароль'
       password_confirm: "Подтвердите пароль"
+      edit_title: "Редактирование профиля"
 
     events:
       events: "События"
