@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.2.0"
 
+gem 'fog-aws'
 gem "cssbundling-rails"
 gem "carrierwave"
 gem "rmagick"
